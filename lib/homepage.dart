@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel/itemmodel.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -6,6 +7,36 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+   final List<LocationItemModel> locations = [
+    LocationItemModel(
+        image:
+            "https://images.pexels.com/photos/1657984/pexels-photo-1657984.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        name: "Location"),
+    LocationItemModel(
+        image:
+            "https://images.pexels.com/photos/2474689/pexels-photo-2474689.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        name: "Location"),
+    LocationItemModel(
+        image:
+            "https://images.pexels.com/photos/1694621/pexels-photo-1694621.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        name: "Location"),
+    LocationItemModel(
+        image:
+            "https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        name: "Location"),
+    LocationItemModel(
+        image:
+            "https://images.pexels.com/photos/415708/pexels-photo-415708.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        name: "Location"),
+    LocationItemModel(
+        image:
+            "https://images.pexels.com/photos/1603650/pexels-photo-1603650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        name: "Location"),
+    LocationItemModel(
+        image:
+            "https://images.pexels.com/photos/1098460/pexels-photo-1098460.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        name: "Location"),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +61,7 @@ class _HomePageState extends State<HomePage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Chip(
-                              label: Text('Asia',
+                              label: Text('Africa',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 18,
@@ -41,7 +72,82 @@ class _HomePageState extends State<HomePage> {
                               SizedBox(
                                 height: 10,
                               ),
-                              Text('Discover')
+                              Text('Discover\nAfrica',
+                              style: TextStyle(
+                                fontSize: 60,
+                                color: Colors.white,
+                                height: 1,
+                                shadows: [
+                                  Shadow(
+                                    blurRadius: 50,
+                                    color: Color(0xFF000000),
+                                offset: Offset(0, 0),
+                                  )
+                                ]
+                              ),
+                              )
+                          ],
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(top:200),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Padding(padding: EdgeInsets.only(left:20),
+                            child: Text('Visit Africa',
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.white
+                            ),
+                            
+                            ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(top:20),
+                              height: 200,
+                              child: ListView.builder(
+                                itemCount: locations.length,
+                                shrinkWrap: true,
+                                scrollDirection: Axis.horizontal,
+                                itemBuilder: (context, index){
+                                  return InkWell(
+                                    onTap: (){},
+                                    child: Container(
+                                      width: 170,
+                                      margin: EdgeInsets.only(left:20, right:20),
+                                      decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(16),
+                                        boxShadow: [
+                                          BoxShadow(
+                                            blurRadius: 40,
+                                            color: Color(0x99000000),
+                                          offset: Offset(4, 20),
+                                          )
+                                        ]
+                                      ),
+                                      child: Column(
+                                        children: <Widget>[
+                                          ClipRRect(
+                                            borderRadius: BorderRadius.circular(16),
+                                            child: Image(
+                                              image:NetworkImage(locations[index].image),
+                                              width: 170,
+                                              height: 170,
+                                              fit: BoxFit.cover,
+                                               ),
+                                          ),
+                                          Text(locations[index].name)
+                                        ],
+                                      ),
+                                    ),
+                                  );
+
+                                },
+                                
+                                ),
+                            )
                           ],
                         ),
                       )
