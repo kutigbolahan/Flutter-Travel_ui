@@ -11,32 +11,32 @@ class _HomePageState extends State<HomePage> {
    final List<LocationItemModel> locations = [
     LocationItemModel(
         image:
-            "https://images.pexels.com/photos/1657984/pexels-photo-1657984.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        name: "Location"),
+            "https://images.unsplash.com/photo-1570371874918-034cf0c28cc6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=401&q=80",
+        name: "Nigeria"),
     LocationItemModel(
         image:
-            "https://images.pexels.com/photos/2474689/pexels-photo-2474689.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        name: "Location"),
+            "https://images.unsplash.com/photo-1511965675262-c4e1e6ac3f06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80",
+        name: "Tanzania"),
     LocationItemModel(
         image:
-            "https://images.pexels.com/photos/1694621/pexels-photo-1694621.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        name: "Location"),
+            "https://images.unsplash.com/photo-1566288592443-0a0d6853dddc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
+        name: "Egypt"),
     LocationItemModel(
         image:
-            "https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        name: "Location"),
+            "https://images.unsplash.com/photo-1519659528534-7fd733a832a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=626&q=80",
+        name: "Kenya"),
     LocationItemModel(
         image:
-            "https://images.pexels.com/photos/415708/pexels-photo-415708.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        name: "Location"),
+            "https://images.unsplash.com/photo-1551523577-51f7c17957cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80",
+        name: "Mozambique"),
     LocationItemModel(
         image:
-            "https://images.pexels.com/photos/1603650/pexels-photo-1603650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        name: "Location"),
+            "https://images.unsplash.com/photo-1585801861896-bf4a67e74d35?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80",
+        name: "Cape-Verde"),
     LocationItemModel(
         image:
-            "https://images.pexels.com/photos/1098460/pexels-photo-1098460.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        name: "Location"),
+            "https://images.unsplash.com/photo-1529528070131-eda9f3e90919?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80",
+        name: "South Africa"),
   ];
   @override
   Widget build(BuildContext context) {
