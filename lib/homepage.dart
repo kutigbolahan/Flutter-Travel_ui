@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel/itemmodel.dart';
+import 'package:travel/locationdetails.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -112,7 +113,9 @@ class _HomePageState extends State<HomePage> {
                                 scrollDirection: Axis.horizontal,
                                 itemBuilder: (context, index){
                                   return InkWell(
-                                    onTap: (){},
+                                    onTap: (){
+                                      Navigator.push(context, MaterialPageRoute(builder: (context)=>LocationDetails()));
+                                    },
                                     child: Container(
                                       width: 170,
                                       margin: EdgeInsets.only(left:20, right:20),
